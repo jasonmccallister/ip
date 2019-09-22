@@ -12,7 +12,8 @@ type response struct {
 	IP string `json:"ip,omitempty"`
 }
 
-func main() {
+// Handler is the endpoint that creates the serverless function for Zeit
+func Handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("IP microservice started")
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
