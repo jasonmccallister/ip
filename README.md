@@ -1,6 +1,6 @@
-# IP
+# ip
 
-IP is a Go microservice that uses a pattern to deploy the same logic across multiple clouds. The purpose of this project is to demonstrate best practices on organizing code.
+ip is a Go microservice that uses a pattern to deploy the same business logic across multiple cloud providers. The purpose of this project is to demonstrate best practices on organizing code, especially when moving between providers.
 
 This service provides an API endpoint to return the users IP address.
 
