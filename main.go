@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/jasonmccallister/ip/internal"
+	"github.com/jasonmccallister/ip/pkg"
 )
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		resp := internal.IPResponse{
-			IP: internal.GetIP(r),
+		resp := pkg.IPResponse{
+			IP: pkg.GetIP(r),
 		}
 
 		js, err := json.Marshal(resp)

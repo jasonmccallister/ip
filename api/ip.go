@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/jasonmccallister/ip/internal"
+	"github.com/jasonmccallister/ip/pkg"
 )
 
 // Handler is the endpoint that creates the serverless function for Zeit
 func Handler(w http.ResponseWriter, r *http.Request) {
-	resp := internal.IPResponse{
-		IP: internal.GetIP(r),
+	resp := pkg.IPResponse{
+		IP: pkg.GetIP(r),
 	}
 
 	js, err := json.Marshal(resp)
