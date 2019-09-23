@@ -4,7 +4,7 @@ IP is a Go microservice that uses a pattern to deploy the same logic across mult
 
 This service provides an API endpoint to return the users IP address.
 
-TODO add screenshot
+![Screenshot](/screenshot.png?raw=true "Screenshot")
 
 ## Deployed on
 
