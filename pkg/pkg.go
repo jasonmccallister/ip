@@ -1,6 +1,8 @@
 package pkg
 
-import "net/http"
+import (
+	"net/http"
+)
 
 // IPResponse is the struct that contains the IP response
 type IPResponse struct {
@@ -15,4 +17,10 @@ func GetIP(r *http.Request) string {
 	}
 
 	return r.Header.Get("X-Forwarded-For")
+}
+
+// JSONResponse takes a response and
+func JSONResponse(w http.ResponseWriter, body []byte) {
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(body)
 }

@@ -19,6 +19,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(js)
+	pkg.JSONResponse(w, js)
 }

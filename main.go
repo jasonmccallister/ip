@@ -22,8 +22,7 @@ func main() {
 			return
 		}
 
-		w.Header().Set("Content-Type", "application/json")
-		w.Write(js)
+		pkg.JSONResponse(w, js)
 	})
 
 	port := os.Getenv("PORT")
